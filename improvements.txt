@@ -1,0 +1,28 @@
+One way to improve the current system would be if a noun would be able to take
+more attributes than one at once, so that instead of adding e.g.:
+  $$ John is a duck.
+  $$ John is orange.
+we could simply type in:
+  $$ John in an orange duck.
+
+Another improvement could be adding more function words, such as "THAT" so that
+the question "Who is an orange duck and likes Mary?" could also be written as
+"Who is an orange duck that likes Mary?". On top of that, the system does not
+currently allow for negations, such as
+  $$ John is not a duck.
+"NOT" could be added to the function words list and the grammar could be updated
+implement this change. We could also use tokenization to implement this, by
+normalize "didn't" form to two separate forms: did and n’t, or not. We can do
+this work with the help of a lookup table.
+
+Another limitation of the system is that verbs such as "like" require a proper
+name after them in order for the sentence to be parsed. This could be extended
+to also work for common nouns, such that sentences like:
+  $$ John likes ducks.
+could be parsed.
+
+These improvements would not be very difficult to implement and their benefits
+would be user-related, more specifically, people using the dialogue system would
+feel less constrained by the grammar that needs to be used and the specific
+words they need to type in, in order for the system to provide the answers they
+were looking for.
